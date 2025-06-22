@@ -1,209 +1,266 @@
-import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown, FaDownload, FaFileAlt } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiPython, SiTypescript, SiTailwindcss, SiNextdotjs, SiMongodb, SiPostgresql } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload, FaFileAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { SiReact, SiNodedotjs, SiPython, SiMongodb } from "react-icons/si";
 
 export default function Home() {
   const projects = [
     {
       title: "AI-Powered Generative Chatbot",
-      description: "It is a  Generative AI Chatbot which generates content to user queries using OpenAI API.it also has multiple real-time data services such as  PDF upload & summarization using NLP models, real-time news updates, live weather data, and stock market information.",
+      description: "It is a Generative AI Chatbot which generates content to user queries using OpenAI API. It also has multiple real-time data services such as PDF upload & summarization using NLP models, real-time news updates, live weather data, and stock market information.",
       tech: ["OpenAI GPT", "Hugging Face", "NewsAPI", "OpenWeatherMap", "Alpha Vantage", "React", "Node.js"],
-      link: "https://github.com/bhargavreddi7889/brahmandAI",
-      visit:"https://brahamand.ai/",
-      image: "/ai-aggregator.jpg"
+      link: "https://github.com/bhargavreddi7889/brahmandAI"
     },
     {
       title: "Full Stack Chat Application",
       description: "React-powered chat application with dynamic UI, seamless conversations, and chat room navigation. Features REST APIs, persistent chat sessions, real-time typing indicators, and active user status.",
       tech: ["React", "Node.js", "Express.js", "Socket.io", "MongoDB", "JavaScript"],
-      link: "https://github.com/yourusername/fullstack-chat-app",
-      image: "/chat-app.jpg"
+      link: "https://github.com/yourusername/fullstack-chat-app"
     },
     {
       title: "Transcription-System",
       description: "Full-stack transcription system with React/Tailwind frontend and FastAPI/Python backend. Integrated OpenAI Whisper with PyTorch for high-accuracy audio/video to text conversion with batch processing.",
       tech: ["React", "Tailwind CSS", "FastAPI", "Python", "OpenAI Whisper", "PyTorch"],
-      link: "https://github.com/bhargavreddi7889/Transcription-system",
-      image: "/transcription.jpg"
+      link: "https://github.com/bhargavreddi7889/Transcription-system"
     },
     {
       title: "Blog-Website",
       description: "Full-stack blog system with user authentication and complete CRUD operations. Features rich-text editor, comment system, dynamic routing with SEO-friendly URLs, and responsive design.",
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
-      link: "https://github.com/bhargavreddi7889/my_Blog",
-      image: "/blog.jpg"
+      link: "https://github.com/bhargavreddi7889/my_Blog"
     }
   ];
 
   const skills = [
-    { name: "React", icon: SiReact, color: "text-blue-500" },
-    { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
-    { name: "Python", icon: SiPython, color: "text-yellow-500" },
-    { name: "JavaScript", color: "text-yellow-600" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-    { name: "MySQL", color: "text-blue-700" },
-    { name: "Java", color: "text-red-500" },
-    { name: "HTML & CSS", color: "text-orange-500" },
-    { name: "Git", color: "text-gray-600" },
-    { name: "Firebase", color: "text-orange-600" },
-    { name: "OpenAI API", color: "text-purple-500" },
-    { name: "Deep Learning", color: "text-indigo-600" },
-    { name: "Neural Networks", color: "text-pink-500" },
-    { name: "NLP", color: "text-teal-500" },
-    { name: "Android Studio", color: "text-green-700" },
-    { name: "Postman", color: "text-orange-400" },
+    { name: "React", icon: SiReact },
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "Python", icon: SiPython },
+    { name: "JavaScript" },
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "MySQL" },
+    { name: "Java" },
+    { name: "HTML & CSS" },
+    { name: "Git" },
+    { name: "Firebase" },
+    { name: "OpenAI API" },
+    { name: "Deep Learning" },
+    { name: "Neural Networks" },
+    { name: "NLP" },
+    { name: "Android Studio" },
+    { name: "Postman" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
+      <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-xl z-50 border-b border-yellow-400/20 shadow-lg shadow-yellow-500/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-xl font-bold text-slate-800 dark:text-white">REDDI ESWAR BHARGAV</div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">About</a>
-              <a href="#projects" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Projects</a>
-              <a href="#skills" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Skills</a>
-              <a href="#contact" className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Contact</a>
+            <div className="text-lg sm:text-xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">REDDI ESWAR BHARGAV</div>
+            
+            {/* Mobile menu button */}
+            <button className="md:hidden p-2 rounded-lg hover:bg-yellow-400/10 transition-colors">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            
+            {/* Desktop menu */}
+            <div className="hidden md:flex space-x-4 lg:space-x-8">
+              <a href="#about" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">About</a>
+              <a href="#experience" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">Experience</a>
+              <a href="#education" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">Education</a>
+              <a href="#projects" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">Projects</a>
+              <a href="#skills" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">Skills</a>
+              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors font-medium text-sm lg:text-base">Contact</a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-4xl font-bold text-white">B</span>
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(245,158,11,0.05)_50%,transparent_75%)]"></div>
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="mb-6 sm:mb-8">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center shadow-2xl shadow-yellow-500/25">
+              <span className="text-2xl sm:text-4xl font-bold text-black">B</span>
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white mb-6">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Bhargav</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight px-2">
+            Hi, I'm Bhargav
           </h1>
-          <p className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 mb-8">
-            I build <span className="font-semibold text-slate-800 dark:text-white">AI + MERN stack applications</span>
+          <p className="text-lg sm:text-xl md:text-3xl text-gray-300 mb-6 sm:mb-8 font-medium px-2">
+            I build <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">AI + FULL stack applications</span>
           </p>
-          <p className="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-3xl mx-auto">
-            Final year B.Tech IT student at MVGR College, specializing in AI, ML, and MERN stack development. 
-            Experienced in building AI-powered tools and scalable full-stack applications. 
-            Focused on solving real-world problems using data-driven and user-centric solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
+            
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
             <a 
               href="#projects" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-yellow-500/25"
             >
               View My Work
             </a>
             <a 
               href="#contact" 
-              className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              className="border-2 border-yellow-400 text-yellow-400 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg hover:bg-yellow-400/10 transition-all duration-300 backdrop-blur-sm"
             >
               Get In Touch
             </a>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 sm:mt-16">
             <a href="#about" className="inline-block animate-bounce">
-              <FaArrowDown className="text-2xl text-slate-400" />
+              <FaArrowDown className="text-2xl sm:text-3xl text-yellow-400" />
             </a>
           </div>
         </div>
       </section>
 
-
-
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-slate-800 dark:text-white mb-16">About Me</h2>
-          <div className="space-y-12">
+      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">About Me</h2>
+          
+          <div className="bg-gray-900/90 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl shadow-yellow-500/10 border border-yellow-400/20">
             <div className="text-center">
-              
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 max-w-3xl mx-auto">
-                I'm a final year B.Tech IT student at MVGR College with a passion for AI, machine learning, and full-stack development. 
-                My journey in technology has been driven by curiosity and a desire to create solutions that make a real impact.
-              </p>
-              
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-                I believe in combining technical expertise with user-centric design to build scalable applications that solve 
-                real-world problems through data-driven approaches.
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              Final year B.Tech IT student at MVGR College, specializing in AI, ML, and MERN stack development. I developed numerous full stack application using react, node.js,next.js.worked on backend using express.js and mongodb.I also specilize in integrating web applications with AI models and features.
               </p>
             </div>
-            
-            <div className="space-y-8">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-xl shadow-lg">
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-white mb-6 text-center">Professional Experience</h4>
-                <div className="mb-4">
-                  <h5 className="text-lg font-semibold text-slate-800 dark:text-white">Developer Intern</h5>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">Robustrix IT Solutions • April 2025 - Present • Delhi, India</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Experience Section */}
+      <section id="experience" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">Professional Experience</h2>
+          
+          <div className="bg-gray-900/90 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl shadow-yellow-500/10 border border-yellow-400/20">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white flex flex-col sm:flex-row items-start sm:items-center">
+              <FaBriefcase className="mr-0 sm:mr-4 mb-2 sm:mb-0 text-yellow-400" />
+              <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">Work Experience</span>
+            </h3>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="border-l-4 border-yellow-400 pl-4 sm:pl-8 hover:pl-6 sm:hover:pl-12 transition-all duration-300">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 sm:mb-4">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 lg:mb-0">Developer (Intern)</h4>
+                  <span className="text-yellow-400 font-bold text-sm sm:text-lg bg-yellow-400/10 px-2 sm:px-3 py-1 rounded-full inline-block w-fit">04/2025 – Present</span>
                 </div>
-                <ul className="space-y-3 text-slate-600 dark:text-slate-300">
-                  <li className="flex items-start"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>Built an AI chat model (Brahamand.ai) which performs various functions like PDF summarization, news, weather, stock analysis</li>
-                  <li className="flex items-start"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>Developed a production-ready CRM system using the MERN stack</li>
-                  <li className="flex items-start"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>Implemented PDF processing features for content extraction and summarization</li>
-                  <li className="flex items-start"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>Designed, developed, and hosted internal web applications with real user adoption</li>
+                <p className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent mb-4">Robustrix IT Solutions | Delhi, India</p>
+                
+                <ul className="space-y-3 text-base sm:text-lg text-gray-300 leading-relaxed">
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-3 mt-1">•</span>
+                    Built an AI chat model (Brahamand.ai) which performs various functions like PDF summarization, news, weather, stock analysis.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-3 mt-1">•</span>
+                    Developed a production-ready CRM system using the MERN stack.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-3 mt-1">•</span>
+                    Implemented PDF processing features for content extraction and summarization.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-yellow-400 mr-3 mt-1">•</span>
+                    Designed, developed, and hosted internal web applications with real user adoption.
+                  </li>
                 </ul>
               </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 p-8 rounded-xl shadow-lg">
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-white mb-6 text-center">Education</h4>
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="text-lg font-semibold text-slate-800 dark:text-white">B.Tech (Information Technology)</h5>
-                    <p className="text-green-600 dark:text-green-400 font-medium">Maharaj Vijayaram Gajapathi Raj College of Engineering • 2026 • Vizianagaram, India</p>
-                    <p className="text-slate-600 dark:text-slate-300">CGPA: 8.92</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">Education</h2>
+          
+          <div className="space-y-8 sm:space-y-12">
+            <div className="bg-gray-900/90 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl shadow-yellow-500/10 border border-yellow-400/20">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white flex flex-col sm:flex-row items-start sm:items-center">
+                <FaGraduationCap className="mr-0 sm:mr-4 mb-2 sm:mb-0 text-yellow-400" />
+                <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">Academic Background</span>
+              </h3>
+              <div className="space-y-6 sm:space-y-8">
+                <div className="border-l-4 border-yellow-400 pl-4 sm:pl-8 hover:pl-6 sm:hover:pl-12 transition-all duration-300">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 sm:mb-4">
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 lg:mb-0">B.Tech in Information Technology</h4>
+                    <span className="text-yellow-400 font-bold text-sm sm:text-lg bg-yellow-400/10 px-2 sm:px-3 py-1 rounded-full inline-block w-fit">2022 - 2026</span>
                   </div>
-                  <div>
-                    <h5 className="text-lg font-semibold text-slate-800 dark:text-white">Intermediate</h5>
-                    <p className="text-green-600 dark:text-green-400 font-medium">Sainik School Kalikiri • Kalikiri, India</p>
-                    <p className="text-slate-600 dark:text-slate-300">Percentage: 92%</p>
+                  <p className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent mb-2 sm:mb-3">MVGR College of Engineering</p>
+                  <p className="text-base sm:text-lg text-gray-300">CGPA: <span className="font-bold text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded text-sm sm:text-base">8.92</span></p>
+                </div>
+                
+                <div className="border-l-4 border-white pl-4 sm:pl-8 hover:pl-6 sm:hover:pl-12 transition-all duration-300">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 sm:mb-4">
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-2 lg:mb-0">Intermediate (XII)</h4>
+                    <span className="text-white font-bold text-sm sm:text-lg bg-white/10 px-2 sm:px-3 py-1 rounded-full inline-block w-fit">2020 - 2022</span>
                   </div>
+                  <p className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">Sainik School Kalikiri</p>
+                  <p className="text-base sm:text-lg text-gray-300">Percentage: <span className="font-bold text-white bg-white/10 px-2 py-1 rounded text-sm sm:text-base">92%</span></p>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-slate-800 dark:text-white mb-16">Featured Projects</h2>
-          <div className="space-y-12">
+      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">Featured Projects</h2>
+          <div className="space-y-8 sm:space-y-12">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className="p-8">
-                  <div className="flex items-start justify-between mb-6">
+              <div key={index} className="bg-gray-900/90 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 overflow-hidden border border-yellow-400/20">
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-start justify-between mb-4 sm:mb-6">
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-3">{project.title}</h3>
-                      <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{project.description}</p>
+                      <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent mb-2 sm:mb-3">{project.title}</h3>
+                      <p className="text-base sm:text-lg text-gray-300 leading-relaxed">{project.description}</p>
                     </div>
                   </div>
                   
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Technologies Used</h4>
+                  <div className="mb-4 sm:mb-6">
+                    <h4 className="text-xs sm:text-sm font-semibold text-white uppercase tracking-wide mb-2 sm:mb-3">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-full border border-blue-200 dark:border-blue-800">
+                        <span key={techIndex} className="px-3 sm:px-4 py-1 sm:py-2 bg-yellow-400/10 text-yellow-400 text-xs sm:text-sm font-medium rounded-full border border-yellow-400/30 shadow-sm">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700">
-                    <div className="flex items-center text-slate-500 dark:text-slate-400">
-                      <span className="text-sm">Project #{index + 1}</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-4 border-t border-gray-700 gap-3 sm:gap-0">
+                    <div className="flex items-center text-gray-400">
+                      <span className="text-xs sm:text-sm">Project #{index + 1}</span>
                     </div>
                     <a 
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
                     >
-                      <FaGithub className="text-lg" />
+                      <FaGithub className="text-base sm:text-lg" />
                       View on GitHub
                     </a>
                   </div>
@@ -215,51 +272,69 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-slate-800 dark:text-white mb-16">Skills & Technologies</h2>
-          <div className="space-y-4">
-            {skills.map((skill, index) => (
-              <div key={index} className="flex items-center space-x-4 py-3 px-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors duration-200">
-                <div className="flex items-center justify-center w-8 h-8">
-                  {skill.icon ? (
-                    <skill.icon className={`text-xl ${skill.color}`} />
-                  ) : (
-                    <span className={`text-sm font-bold ${skill.color}`}>
-                      {skill.name.split(' ').map(word => word[0]).join('')}
-                    </span>
-                  )}
+      <section id="skills" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">Skills & Technologies</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            {skills.map((skill, index) => {
+              const colors = [
+                'from-yellow-400 to-yellow-300',
+                'from-white to-gray-200', 
+                'from-yellow-500 to-yellow-400',
+                'from-gray-100 to-white',
+                'from-yellow-300 to-yellow-200',
+                'from-white to-yellow-100'
+              ];
+              const colorClass = colors[index % colors.length];
+              
+              return (
+                <div key={index} className="flex items-center space-x-3 sm:space-x-4 py-3 sm:py-4 px-4 sm:px-6 bg-gray-900/90 backdrop-blur-sm hover:bg-gray-800/90 rounded-lg sm:rounded-xl transition-all duration-300 border border-yellow-400/20 shadow-sm hover:shadow-md hover:shadow-yellow-500/20">
+                  <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
+                    {skill.icon ? (
+                      <skill.icon className={`text-xl sm:text-2xl bg-gradient-to-r ${colorClass} bg-clip-text text-transparent`} />
+                    ) : (
+                      <span className={`text-xs sm:text-sm font-bold bg-gradient-to-r ${colorClass} bg-clip-text text-transparent`}>
+                        {skill.name.split(' ').map(word => word[0]).join('')}
+                      </span>
+                    )}
+                  </div>
+                  <div className={`w-1 h-6 sm:h-8 bg-gradient-to-b ${colorClass} rounded-full flex-shrink-0`}></div>
+                  <h3 className="text-base sm:text-lg font-semibold text-white">{skill.name}</h3>
                 </div>
-                <span className="w-2 h-2 bg-slate-400 dark:bg-slate-500 rounded-full"></span>
-                <h3 className="text-lg font-medium text-slate-800 dark:text-white">{skill.name}</h3>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-16">Get In Touch</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto">
+      <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent px-4">Get In Touch</h2>
+          <p className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
             I'm always interested in hearing about new opportunities and exciting projects. 
             Whether you have a question or just want to say hi, feel free to reach out!
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 px-4">
             <a 
               href="mailto:bhargav623sskal@gmail.com" 
-              className="flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             >
-              <FaEnvelope /> Email Me
+              <FaEnvelope className="text-sm sm:text-base" /> Email Me
             </a>
             <a 
               href="https://www.linkedin.com/in/reddi-bhargav-a977bb259/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              className="flex items-center justify-center gap-2 sm:gap-3 border-2 border-yellow-400 text-yellow-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-400/10 transition-all duration-300 text-sm sm:text-base"
             >
-              <FaLinkedin /> LinkedIn
+              <FaLinkedin className="text-sm sm:text-base" /> LinkedIn
             </a>
           </div>
           <div className="flex justify-center space-x-6">
@@ -267,9 +342,9 @@ export default function Home() {
               href="https://github.com/bhargavreddi7889" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
             >
-              <FaGithub className="text-2xl" />
+              <FaGithub className="text-xl sm:text-2xl" />
             </a>
             
           </div>
@@ -277,23 +352,25 @@ export default function Home() {
       </section>
 
       {/* Resume Download Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-8 border border-blue-100 dark:border-blue-800">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="bg-gray-900/90 backdrop-blur-lg rounded-2xl shadow-xl p-8 border border-yellow-400/20 shadow-yellow-500/10">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
-                <FaFileAlt className="text-2xl text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center">
+                <FaFileAlt className="text-2xl text-black" />
               </div>
             </div>
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-4">Download My Resume</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Get a comprehensive overview of my skills, experience, and projects. Perfect for recruiters and hiring managers.
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent mb-4">Download My Resume</h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get a comprehensive overview of my skills, experience, and projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/bhargav_resume.pdf" 
                 download="bhargav_resume.pdf"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <FaDownload className="text-lg" />
                 Download Resume (PDF)
@@ -302,23 +379,22 @@ export default function Home() {
                 href="/bhargav_resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300"
+                className="inline-flex items-center gap-3 border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400/10 transition-all duration-300"
               >
                 <FaFileAlt className="text-lg" />
                 View Online
               </a>
             </div>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-6">
-              Last updated: January 2025 • File size: ~200KB
-            </p>
+            
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-black text-center">
-        <p className="text-slate-400">
-          © 2025 Bhargav. Built with Next.js and Tailwind CSS.
+      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-black text-center relative border-t border-yellow-400/20">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-500/5 to-transparent"></div>
+        <p className="text-gray-300 relative z-10 font-medium">
+          © 2025 Bhargav. Built with <span className="text-yellow-400">Next.js</span> and <span className="text-white">Tailwind CSS</span>.
         </p>
       </footer>
     </div>
