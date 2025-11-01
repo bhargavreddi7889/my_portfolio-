@@ -1,37 +1,50 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload, FaFileAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiPython, SiMongodb } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload, FaFileAlt, FaBriefcase, FaGraduationCap, FaExternalLinkAlt } from "react-icons/fa";
+import { SiReact, SiNodedotjs, SiPython, SiMongodb, SiNextdotjs, SiExpress } from "react-icons/si";
 
 export default function Home() {
   const projects = [
     {
-      title: "AI-Powered Generative Chatbot",
-      description: "It is a Generative AI Chatbot which generates content to user queries using OpenAI API. It also has multiple real-time data services such as PDF upload & summarization using NLP models, real-time news updates, live weather data, and stock market information.",
-      tech: ["OpenAI GPT", "Hugging Face", "NewsAPI", "OpenWeatherMap", "Alpha Vantage", "React", "Node.js"],
-      link: "https://github.com/bhargavreddi7889/brahmandAI"
+      title: "Chitbox - Email Communication Platform",
+      description: "A self-hosted AI-powered mail and communication platform using Next.js and Express for backend, deployed on a private VPS with full control over Postfix (SMTP) and Dovecot (IMAP) mail servers. Integrated OpenAI-driven features like spell-check, tone polish, rewriter, summarizer, and smart auto-reply, enabling intelligent email assistance and enhanced productivity. Configured end-to-end infrastructure and domain security including SPF, DKIM, and DMARC records, SSL setup, DNS management, and scalable delivery handling—achieving complete independence from third-party mail providers.",
+      tech: ["Next.js", "Express.js", "OpenAI API", "Postfix", "Dovecot", "VPS", "SMTP", "IMAP", "SSL", "DNS", "SPF", "DKIM", "DMARC"],
+      link: "https://chitbox.co/",
+      isLive: true
+    },
+    {
+      title: "FoodFly – Food Delivery Application",
+      description: "Built a Next.js-based food delivery platform with role-specific dashboards for customers, restaurants, delivery agents, and admins. Developed admin dashboards for managing restaurants, tracking deliveries, and monitoring platform analytics. Integrated Google Maps APIs for real-time delivery tracking and optimized routing. Designed a scalable order management system with secure payments, live order status, and responsive UI.",
+      tech: ["Next.js", "React", "Google Maps API", "Payment Integration", "Order Management", "Role-Based Access", "Admin Dashboard"],
+      link: "https://foodfly.co/",
+      isLive: true
     },
     {
       title: "Full Stack Chat Application",
       description: "React-powered chat application with dynamic UI, seamless conversations, and chat room navigation. Features REST APIs, persistent chat sessions, real-time typing indicators, and active user status.",
       tech: ["React", "Node.js", "Express.js", "Socket.io", "MongoDB", "JavaScript"],
-      link: "https://github.com/yourusername/fullstack-chat-app"
+      link: "https://github.com/yourusername/fullstack-chat-app",
+      isLive: false
     },
     {
       title: "Transcription-System",
       description: "Full-stack transcription system with React/Tailwind frontend and FastAPI/Python backend. Integrated OpenAI Whisper with PyTorch for high-accuracy audio/video to text conversion with batch processing.",
       tech: ["React", "Tailwind CSS", "FastAPI", "Python", "OpenAI Whisper", "PyTorch"],
-      link: "https://github.com/bhargavreddi7889/Transcription-system"
+      link: "https://github.com/bhargavreddi7889/Transcription-system",
+      isLive: false
     },
     {
       title: "Blog-Website",
       description: "Full-stack blog system with user authentication and complete CRUD operations. Features rich-text editor, comment system, dynamic routing with SEO-friendly URLs, and responsive design.",
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
-      link: "https://github.com/bhargavreddi7889/my_Blog"
+      link: "https://github.com/bhargavreddi7889/my_Blog",
+      isLive: false
     }
   ];
 
   const skills = [
+    { name: "Next.js", icon: SiNextdotjs },
     { name: "React", icon: SiReact },
     { name: "Node.js", icon: SiNodedotjs },
+    { name: "Express.js", icon: SiExpress },
     { name: "Python", icon: SiPython },
     { name: "JavaScript" },
     { name: "MongoDB", icon: SiMongodb },
@@ -41,6 +54,8 @@ export default function Home() {
     { name: "Git" },
     { name: "Firebase" },
     { name: "OpenAI API" },
+    { name: "VPS/Server Management" },
+    { name: "Google Maps API" },
     { name: "Deep Learning" },
     { name: "Neural Networks" },
     { name: "NLP" },
@@ -160,20 +175,20 @@ export default function Home() {
                 <ul className="space-y-3 text-base sm:text-lg text-gray-300 leading-relaxed">
                   <li className="flex items-start">
                     <span className="text-yellow-400 mr-3 mt-1">•</span>
-                    Built an AI chat model (Brahamand.ai) which performs various functions like PDF summarization, news, weather, stock analysis.
+                    <span>Led multiple AI and full-stack projects including <span className="whitespace-nowrap"><span className="text-yellow-400 font-semibold">brahamand.ai</span>, <span className="text-yellow-400 font-semibold">FoodFly</span>, and <span className="text-yellow-400 font-semibold">ChitBox</span></span>, focusing on clean deployment and real-time user interaction.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-yellow-400 mr-3 mt-1">•</span>
-                    Developed a production-ready CRM system using the MERN stack.
+                    Deployed and managed production servers on Hostinger VPS, handling domain setup, DNS configuration, SSL certification, and server security through SSH and command-line operations.
                   </li>
                   <li className="flex items-start">
                     <span className="text-yellow-400 mr-3 mt-1">•</span>
-                    Implemented PDF processing features for content extraction and summarization.
-                  </li>
+                    Configured Linux-based mail servers (Postfix SMTP, IMAP) and backend APIs for reliable communication between web applications and hosted services.
+          </li>
                   <li className="flex items-start">
                     <span className="text-yellow-400 mr-3 mt-1">•</span>
-                    Designed, developed, and hosted internal web applications with real user adoption.
-                  </li>
+                    Optimized deployment pipelines with Git-based workflows, ensuring smooth version control, continuous updates, and efficient collaboration across multiple live projects.
+          </li>
                 </ul>
               </div>
             </div>
@@ -256,12 +271,21 @@ export default function Home() {
                     </div>
                     <a 
                       href={project.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
                     >
-                      <FaGithub className="text-base sm:text-lg" />
-                      View on GitHub
+                      {project.isLive ? (
+                        <>
+                          <FaExternalLinkAlt className="text-base sm:text-lg" />
+                          Visit Live Site
+                        </>
+                      ) : (
+                        <>
+                          <FaGithub className="text-base sm:text-lg" />
+                          View on GitHub
+                        </>
+                      )}
                     </a>
                   </div>
                 </div>
@@ -327,21 +351,21 @@ export default function Home() {
               className="flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             >
               <FaEnvelope className="text-sm sm:text-base" /> Email Me
-            </a>
-            <a 
+          </a>
+          <a
               href="https://www.linkedin.com/in/reddi-bhargav-a977bb259/" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 sm:gap-3 border-2 border-yellow-400 text-yellow-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-400/10 transition-all duration-300 text-sm sm:text-base"
-            >
+          >
               <FaLinkedin className="text-sm sm:text-base" /> LinkedIn
-            </a>
-          </div>
+          </a>
+        </div>
           <div className="flex justify-center space-x-6">
-            <a 
+        <a
               href="https://github.com/bhargavreddi7889" 
-              target="_blank" 
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-gray-400 hover:text-yellow-400 transition-colors"
             >
               <FaGithub className="text-xl sm:text-2xl" />
@@ -374,11 +398,11 @@ export default function Home() {
               >
                 <FaDownload className="text-lg" />
                 Download Resume (PDF)
-              </a>
-              <a 
+        </a>
+        <a
                 href="/bhargav_resume.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400/10 transition-all duration-300"
               >
                 <FaFileAlt className="text-lg" />
